@@ -83,18 +83,14 @@ let timeOut=setInterval(function(){
 
 /* ========================================================== */
 
-let textArea=$('textarea').val()
-   ,maxNumOfChar=100
-   ,remainingNumChar=100; 
-
-   function charCounting(){
-      
-         remainingNumChar=maxNumOfChar - textArea.length;
-         $('#charCounter').text(`${remainingNumChar}`);
-         console.log(textArea)
-      
-   }
+ 
+let textInp=document.getElementById('textArea');
+console.log(textInp);
+textInp.addEventListener("input",function(){
    
-$('textarea').keypress(function(){
-   charCounting()
+   let maxNumOfChar=100
+      ,remainingNumChar=100;
+         remainingNumChar=maxNumOfChar -textArea.value.length;
+         $('#charCounter').text(`${remainingNumChar}`);
+      
 })
