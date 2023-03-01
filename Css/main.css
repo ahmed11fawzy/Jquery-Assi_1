@@ -1,3 +1,6 @@
+body{
+   scroll-behavior: smooth;
+}
 #home{
    height: 100vh;
    background-color:rgba(214, 46, 51, 0.6);

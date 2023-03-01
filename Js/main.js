@@ -59,7 +59,7 @@ $('#Details h2').click(function(){
    $("#Details p").not($(this).next()).slideUp(500);
 })
 
-/* ================================================= */
+/* ========================================================= */
 
 let theEndDate=new Date('May 23,2023 6:00:00').getTime()
 let timeOut=setInterval(function(){
@@ -85,7 +85,7 @@ let timeOut=setInterval(function(){
 
  
 let textInp=document.getElementById('textArea');
-console.log(textInp);
+
 textInp.addEventListener("input",function(){
    
    let maxNumOfChar=100
@@ -93,4 +93,19 @@ textInp.addEventListener("input",function(){
          remainingNumChar=maxNumOfChar -textArea.value.length;
          $('#charCounter').text(`${remainingNumChar}`);
       
+})
+
+/* =========================================================== */
+
+
+   $('li a').click(function(e){
+      e.preventDefault();
+      let sectionTitle=this.hash; //const href = $(this).attr("href");
+    
+      
+      $('body,html').animate({
+         scrollTop:$(sectionTitle).offset().top
+         
+      },2000)
+   
 })
